@@ -11,40 +11,49 @@
 
 <body>
     <header>
-       <h1 id="welcome">Welcome to expense tracking website</h1>
+        <h1 id="welcome">Welcome to expense tracking website</h1>
     </header>
 
     <div class="formcontianer">
 
-        <form action="/signin" method="post">
+        <form action="/signup" method="post" id="form">
             <label for="name" class="formelements"> Name
                 <span aria-hidden="true" class="required">*</span>
-             </label>
-            <input type="text" id="name" class="formelement" required>
+            </label>
+            <input type="text" id="name" name="name" class="formelement" required>
 
             <br> <br>
             <label for="mail" class="formelements">Email
                 <span aria-hidden="true" class="required">*</span>
             </label>
 
-            <input type="email" id="mail" class="formelement" required>
+            <input type="email" id="mail" name="mail" class="formelement" required>
             <br> <br>
             <label for="password" class="formelements">Password</label>
             <span aria-hidden="true" class="required">*</span>
-            <input type="password" id="password" class="formelement" required>
-             <br> <br>
+            <input type="password" name="password" id="password" class="formelement" required>
+            <br> <br>
             <label for="phone" class="formelements">phone</label>
-            <input type="number" id="password" class="formelement" maxlength="10" >
+            <input type="number" name="phone" class="formelement" maxlength="10">
+            <br>
+            <br>
 
-             <div id="signup">
-                 <button id="signupbutton" type="submit"> 
-                   signup
-                 </button>
-             </div>
+            <div class="login">
+
+                <a href="/login" id="loginlink">
+                    Already a user ? Login here </a>
+            </div>
+            <div id="signup">
+                <button id="signupbutton" type="submit">
+                    sign up
+                </button>
+            </div>
 
         </form>
-
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+    <script src="/signup.js"></script>
+
 </body>
 
 </html>
