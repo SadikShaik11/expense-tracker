@@ -4,6 +4,7 @@ const { redirect } = require('express/lib/response');
 
 const bcrypt = require('bcrypt')
 
+
 exports.signup = async (req, res, next) => {
     const details = req.body
     const password = details.password
@@ -17,13 +18,12 @@ exports.signup = async (req, res, next) => {
             email: `${details.mail}`,
             name: `${details.name}`,
             phone: `${details.phone}`,
-            password: `${hashesdpassword}`
+            password: `${hashesdpassword}`,
 
         })
-        res.send(`<h1>sucess<h2>`);
+        res.send(`<script> alert ("Succes")</script>`)
     }
     catch (error) {
-        console.log(error);
-        res.redirect('/')
-    }
+        res.send(`<script> alert ("youre already user please log in")</script>`)
+}
 }
